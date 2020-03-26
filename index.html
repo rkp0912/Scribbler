@@ -71,6 +71,29 @@
                     </p>
                 </form>  
              </div>  
+
+            <div id = "createPostContainer" class="createpost-content">
+                <span id="createPostClose" class="close">&times;</span>
+                <span class="model-content-heading">Pen Your Post</span>
+                <hr class="solid">
+                <form>
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="title" placeholder="Enter the title of your post" required pattern=".{1,}">
+                    </div>
+                    <div class="form-group">
+                        <label for="contents">Contents</label>
+                        <textarea id="w3mission" class="form-control" rows="15" cols="50" placeholder="Enter the contents of your post"></textarea>
+                    </div>  
+                    <div id= "postButton" class="form-group">
+                        <input type="submit" class="form-button" value= "Create" id="postform">
+                    </div>
+                </form>  
+            </div>  
+        </div>
+        <div class="posts">
+            <button id= "allPosts" class="postBtn">All Posts</button>
+            <button id="createPost" class="postBtn">Create Post</button>
         </div>
     </div>
     <script src="scripts/common.js"></script>
