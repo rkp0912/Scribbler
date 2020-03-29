@@ -11,12 +11,6 @@ var btnSignIn = document.getElementById("signIn");
 var signUpSpan = document.getElementsByClassName("close")[0];
 var signInSpan = document.getElementsByClassName("close")[1];
 
-
-// var delPost1 = document.getElementsByClassName("posts");
-
-// var confirmDelete = document.getElementById("confirmDelete");
-// var cancelDelete = document.getElementById("cancelDelete");
-
 var editCurrentPost = document.getElementById("editButton");
 var saveCurrentPost = document.getElementById("saveButton");
 var likeCurrentPost = document.getElementById("likeButton");
@@ -38,26 +32,10 @@ var commentData = document.getElementById("editComment");
 
 var commentsList = document.getElementById("existingComments");
 
-// $('.posts').on("click",".delPost", function(e){ //user click on remove text links
-//     ele = this;
-//     modal.style.display = "block";
-//     var deleteConfirm = document.getElementById("deleteConfirmation");
-//     deleteConfirm.style.display = "block"; 
-//     var signupcontent = document.getElementById("signUpContainer");
-//     signupcontent.style.display = "none";
-//     signUpSpan.style.display = "none";
-//     var signincontent = document.getElementById("signInContainer");
-//     signincontent.style.display = "none";
-//     signInSpan.style.display = "none";
-// })
-
-// $('.posts').on("click",".more", function(e){ //user click on remove text links
-//     window.open("../html/post.html");
-// })
-
 
 // When the user clicks the signup, open the modal 
 btnSignUp.onclick = function() {
+  document.getElementById("signupFormId").reset();
   modal.style.display = "block";
   var signupcontent = document.getElementById("signUpContainer");
   signupcontent.style.display = "block";
@@ -69,6 +47,7 @@ btnSignUp.onclick = function() {
 
 // // When the user clicks the signin, open the modal 
 btnSignIn.onclick = function() {
+    document.getElementById("siginFormId").reset();
     modal.style.display = "block";
     var signupcontent = document.getElementById("signUpContainer");
     signupcontent.style.display = "none";
@@ -93,6 +72,7 @@ signInSpan.onclick = function() {
 }
 
 signUpLink.onclick =function(){
+    document.getElementById("signupFormId").reset();
     modal.style.display = "block";
     var signupcontent = document.getElementById("signUpContainer");
     signupcontent.style.display = "block";
@@ -103,25 +83,8 @@ signUpLink.onclick =function(){
 }
 
 
-// cancelDelete.onclick = function(){
-//     modal.style.display = "none";
-//     var deleteConfirm = document.getElementById("deleteConfirmation");
-//     deleteConfirm.style.display = "none"; 
-// }
-
-
-// confirmDelete.onclick = function(){
-//     modal.style.display = "none";
-//     var deleteConfirm = document.getElementById("deleteConfirmation");
-//     deleteConfirm.style.display = "none";
-//     ele.parentElement.parentElement.parentElement.parentElement.remove();  
-// }
-
 window.onload = function() {
     console.log(localStorage.getItem("Author"));
-
-
-
     title.value = localStorage.getItem("Title");
     author.innerText = localStorage.getItem("Author");
     postContent.value = localStorage.getItem("Content");
@@ -155,7 +118,7 @@ likeCurrentPost.onclick = function(){
     likeCounter++;
     if(likeCounter == 1){
         likeStatus.innerText = "1 person likes this!";
-        likeCurrentPost.innerHTML = '<i class="fa fa-thumbs-up"></i> Liked';
+        likeCurrentPost.innerHTML = '<i class="fa fa-thumbs-up"></i> Liked!';
     }
 
     if(likeCounter > 1){
@@ -172,7 +135,6 @@ commentOnCurrentPost.onclick = function(){
         para.appendChild(node);
         commentData.value = "";
         para.classList.add("comment-style");
-        // commentsList.appendChild(para);
         commentsList.insertBefore(para, document.getElementsByClassName("comment-style")[0]);
     }
 }

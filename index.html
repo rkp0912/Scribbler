@@ -26,7 +26,7 @@
                 <span id="sigUpClose" class="close">&times;</span>
                 <span class="model-content-heading">Get Started</span>
                 <hr class="solid">
-                <form>
+                <form id=signupFormId>
                     <div class="form-group">
                         <label for="usr">Name</label>
                         <input type="text" class="form-control signup-clean-form" id="name" placeholder="Enter your name" required pattern=".{1,}">
@@ -54,20 +54,21 @@
                 <span id="signInClose" class="close">&times;</span>
                 <span class="model-content-heading">Welcome Back!</span>
                 <hr class="solid">
-                <form>
+                <form id="siginFormId">
                     <div class="form-group">
                         <label for="usrname">Username</label>
-                        <input type="text" class="form-control" id="usrname" placeholder="Enter your username" required pattern=".{1,}">
+                        <input type="text" class="form-control" id="usrname-signin" placeholder="Enter your username" required pattern=".{1,}">
                     </div>
                     <div class="form-group">
                         <label for="pwd">Password</label>
-                        <input type="password" class="form-control" id="pwd" placeholder="Enter your password" required pattern=".{1,}">
+                        <input type="password" class="form-control" id="pwd-signin" placeholder="Enter your password" required pattern=".{1,}">
                     </div>
                     <div class="form-group">
                         <input type="submit" class="form-button" value= "Sign In" id="signin-form">
                     </div>
                     <p id="signUpRedirection">Not a member?
-                            <a id="ref" href="#signUpContainer">Sign Up</a>
+                            <!-- <a id="ref" href="#signUpContainer">Sign Up</a> -->
+                            <a id="ref" >Sign Up</a>
                     </p>
                 </form>  
              </div>  
@@ -76,10 +77,10 @@
                 <span id="createPostClose" class="close">&times;</span>
                 <span class="model-content-heading">Pen Your Post</span>
                 <hr class="solid">
-                <form>
+                <form id="postFormId">
                     <div class="form-group">
                         <label for="title">Title</label>
-                        <input type="text" class="form-control" id="title" placeholder="Enter the title of your post" required pattern=".{1,}">
+                        <input type="text" class="form-control" id="title-post" placeholder="Enter the title of your post" required pattern=".{1,}">
                     </div>
                     <div class="form-group">
                         <label for="contents">Contents</label>

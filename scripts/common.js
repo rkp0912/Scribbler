@@ -22,12 +22,7 @@ var inputFields = document.getElementsByClassName("signup-clean-form");
 
 // When the user clicks the signup, open the modal 
 btnSignUp.onclick = function() {
-  // for(var i =0; i<inputFields.length; i++){
-  //   console.log(inputFields[i].setAttribute(value,10));
-  //   // inputFields[i].id.value = "100";
-  //   console.log(inputFields[i].id.value);
-  // }
-
+  document.getElementById("signupFormId").reset();
   modal.style.display = "block";
   var signupcontent = document.getElementById("signUpContainer");
   signupcontent.style.display = "block";
@@ -42,6 +37,7 @@ btnSignUp.onclick = function() {
 
 // When the user clicks the signin, open the modal 
 btnSignIn.onclick = function() {
+    document.getElementById("siginFormId").reset();
     modal.style.display = "block";
     var signupcontent = document.getElementById("signUpContainer");
     signupcontent.style.display = "none";
@@ -56,6 +52,7 @@ btnSignIn.onclick = function() {
 
 // When the user clicks the create post, open the modal 
 createPost.onclick = function() {
+    document.getElementById("postFormId").reset();
     modal.style.display = "block";
     var signupcontent = document.getElementById("signUpContainer");
     signupcontent.style.display = "none";
@@ -89,6 +86,7 @@ createPostSpan.onclick = function() {
 }
 
 signUpLink.onclick =function(){
+    document.getElementById("signupFormId").reset();
     modal.style.display = "block";
     var signupcontent = document.getElementById("signUpContainer");
     signupcontent.style.display = "block";
@@ -102,5 +100,5 @@ signUpLink.onclick =function(){
 }
 
 allPosts.onclick = function(){
-    window.open("html/postslist.html");
+    window.open("html/bloglist.html");
 }
