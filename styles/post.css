@@ -9,11 +9,6 @@ body, html {
   
     /* Full height */
     height: 100%;
-    /* Center and scale the image nicely */
-    /* background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
-    overflow: hidden;
   }
 
   .title{
@@ -337,13 +332,15 @@ textarea:focus{
 #existingComments{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background: grey;
 }
 
 .comment-style{
-  margin: 1% .5%;
-  border: none;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  margin-top: 0.25%;
+  margin-bottom: 0.25%;
   background: white;
 }
 

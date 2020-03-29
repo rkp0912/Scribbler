@@ -165,11 +165,14 @@ likeCurrentPost.onclick = function(){
 }
 
 commentOnCurrentPost.onclick = function(){
-    var para = document.createElement("p");
-    var node = document.createTextNode(commentData.value);
-    para.appendChild(node);
-    commentData.value = "";
-    para.classList.add("comment-style");
-    // commentsList.appendChild(para);
-    commentsList.insertBefore(para, document.getElementsByClassName("comment-style")[0]);
+
+    if(commentData.value != ""){
+        var para = document.createElement("p");
+        var node = document.createTextNode(commentData.value);
+        para.appendChild(node);
+        commentData.value = "";
+        para.classList.add("comment-style");
+        // commentsList.appendChild(para);
+        commentsList.insertBefore(para, document.getElementsByClassName("comment-style")[0]);
+    }
 }
