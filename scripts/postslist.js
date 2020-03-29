@@ -40,6 +40,9 @@ $('.posts').on("click",".delPost", function(e){ //user click on remove text link
 })
 
 $('.posts').on("click",".more", function(e){ //user click on remove text links
+    localStorage.setItem("Author",this.parentElement.parentElement.parentElement.getElementsByTagName("p")[0].innerText);
+    localStorage.setItem("Title",this.parentElement.parentElement.parentElement.getElementsByTagName("p")[1].innerText);
+    localStorage.setItem("Content",this.parentElement.parentElement.parentElement.getElementsByTagName("p")[2].innerText);
     window.open("../html/post.html");
 })
 

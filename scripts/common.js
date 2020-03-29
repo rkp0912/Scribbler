@@ -18,9 +18,16 @@ var allPosts = document.getElementById("allPosts");
 
 var createPost = document.getElementById("createPost");
 
+var inputFields = document.getElementsByClassName("signup-clean-form");
 
 // When the user clicks the signup, open the modal 
 btnSignUp.onclick = function() {
+  // for(var i =0; i<inputFields.length; i++){
+  //   console.log(inputFields[i].setAttribute(value,10));
+  //   // inputFields[i].id.value = "100";
+  //   console.log(inputFields[i].id.value);
+  // }
+
   modal.style.display = "block";
   var signupcontent = document.getElementById("signUpContainer");
   signupcontent.style.display = "block";

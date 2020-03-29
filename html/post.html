@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- TODO: Include Font Awesome file here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- TODO: Include Google Fonts file here -->
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Add CSS -->
+    <link rel="stylesheet" type="text/css" href="../styles/post.css">
+</head>
+
+<body>
+    <!-- TODO: Include all your code for the header and home page here -->
+    <div class="bg">
+        <span class="title">ScriBBler</span>
+        <button id= "signIn" class="loginBtn">Sign In</button>
+        <button id="signUp" class="loginBtn">Sign Up</button>
+        <div id="subHeading">Explore, Imagine, Create</div>
+        <div id="container" class="modal">
+            <!-- signup content -->
+            <div id="signUpContainer" class="signup-content">
+                <span id="sigUpClose" class="close">&times;</span>
+                <span class="model-content-heading">Get Started</span>
+                <hr class="solid">
+                <form>
+                    <div class="form-group">
+                        <label for="usr">Name</label>
+                        <input type="text" class="form-control signup-clean-form" id="name" placeholder="Enter your name" required pattern=".{1,}">
+                    </div>
+                    <div class="form-group">
+                        <label for="usrname">Username</label>
+                        <input type="text" class="form-control signup-clean-form" id="usrname" placeholder="Enter your username" required pattern=".{1,}">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password</label>
+                        <input type="password" class="form-control signup-clean-form" id="pwd" placeholder="Enter your password" required pattern=".{1,}">
+                    </div>
+                    <div class="form-group">
+                        <label for="confim-pwd">Confirm Password</label>
+                        <input type="password" class="form-control signup-clean-form" id="confim-pwd" placeholder="Re-enter your password" required pattern=".{1,}">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="form-button" value= "Sign Up" id="signup-form">
+                    </div>
+                </form>  
+            </div>
+
+            <!-- signin content -->
+            <div id = "signInContainer" class="signin-content">
+                <span id="signInClose" class="close">&times;</span>
+                <span class="model-content-heading">Welcome Back!</span>
+                <hr class="solid">
+                <form>
+                    <div class="form-group">
+                        <label for="usrname">Username</label>
+                        <input type="text" class="form-control" id="usrname" placeholder="Enter your username" required pattern=".{1,}">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter your password" required pattern=".{1,}">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="form-button" value= "Sign In" id="signin-form">
+                    </div>
+                    <p id="signUpRedirection">Not a member?
+                            <a id="ref" href="#signUpContainer">Sign Up</a>
+                    </p>
+                </form>  
+            </div>  
+        </div>
+        <div class="post-detail">
+            <!-- <div id="postTitle" class="post-title" aria-placeholder="">Hello</div> -->
+            <input type="text" id="postTitle" class="post-title" placeholder="Enter your username" required pattern=".{1,}">
+            <div class="edit-post">
+                <p id="authorName" aria-placeholder="">Hello</p>
+                <span>
+                     <button type="button" id="editButton" class="edit-button">Edit <i class="fa fa-edit"></i></button>
+                     <button type="button" id="saveButton" class="edit-button">Save <i class="fa fa-save"></i></button>
+                </span>
+            </div>
+            <textarea id="postContent" rows="10" cols="50" placeholder="Enter the contents of your post"></textarea>
+            <div>
+                <button type="button" id="likeButton" class="edit-button"><i class="fa fa-thumbs-up"></i> Like</button>
+                <p id="likeText">Be the first one to like this!</p>
+            </div>
+            <div id="allComments">
+                <textarea id="editComment" rows="3" cols="50" placeholder="Leave a comment..."></textarea>
+                <button type="button" id="commentButton" class="edit-button">Comment</button>
+                <p id="commentsHeading"><b>All Comments</b></p>
+                <div id="existingComments">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/post.js"></script>
+ </body>
+</html>
