@@ -5,15 +5,10 @@ body, html {
   
   .bg {
     /* The image used */
-    background: #ffeedd;
+    background: white;
   
     /* Full height */
     height: 100%;
-    /* Center and scale the image nicely */
-    /* background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
-    overflow: hidden;
   }
 
   .title{
@@ -81,22 +76,6 @@ body, html {
     border-radius: 0px;
   }
 
-  /* post content */
-  .createpost-content{
-    display: none;
-    background-color: #fefefe;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: -4%;
-    margin-bottom: 5%;
-    padding: 20px;
-    border: 1px solid #888;
-    /* width: 80%;
-    height: 80%; */
-    height:95%;
-    color: grey;
-    border-radius: 0px;
-  }
 
   .delete-confirm{
     display: none;
@@ -268,6 +247,100 @@ body, html {
   border-radius: 0px;
 }
 
-#commentsHeading{
-  font-weight: bold;
+
+.post-detail{
+    display: flex;
+    flex-direction: column;
+    margin: 0% 5%;
 }
+
+.post-title{
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 2% 0%;
+    border: none;
+}
+
+.edit-post{
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit-button{
+    color:white;
+    background: rgba(204, 21, 82, 0.815);
+    border: none;
+    width: 75px;
+    height: 35px;
+    box-shadow: 5px 5px 10px rgba(204, 21, 82, .5);
+}
+
+#postContent{
+    border: none;
+    margin-top: 1%;
+}
+
+#postTitle{
+    pointer-events: none;
+}
+
+#postContent{
+    pointer-events: none;
+}
+
+#saveButton{
+  display: none;
+}
+
+input:focus{
+  outline: none;
+}
+
+button:focus{
+  outline: none;
+}
+
+textarea:focus{
+  outline: none;
+}
+
+#likeText{
+  margin: 1% 0%;
+  color:grey;
+}
+
+
+#allComments{
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
+#editComment{
+  border: 1px solid;
+  border-color: grey;
+  margin: 1% 0%;
+}
+
+#commentsHeading{
+  margin: 1% 0%;
+}
+
+#existingComments{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: grey;
+}
+
+.comment-style{
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  margin-top: 0.25%;
+  margin-bottom: 0.25%;
+  background: white;
+}
+
