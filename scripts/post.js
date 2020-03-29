@@ -118,7 +118,7 @@ likeCurrentPost.onclick = function(){
     likeCounter++;
     if(likeCounter == 1){
         likeStatus.innerText = "1 person likes this!";
-        likeCurrentPost.innerHTML = '<i class="fa fa-thumbs-up"></i> Liked';
+        likeCurrentPost.innerHTML = '<i class="fa fa-thumbs-up"></i> Liked!';
     }
 
     if(likeCounter > 1){
