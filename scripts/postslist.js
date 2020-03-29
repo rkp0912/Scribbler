@@ -49,6 +49,7 @@ $('.posts').on("click",".more", function(e){ //user click on remove text links
 
 // When the user clicks the signup, open the modal 
 btnSignUp.onclick = function() {
+  document.getElementById("signupFormId").reset();
   modal.style.display = "block";
   var signupcontent = document.getElementById("signUpContainer");
   signupcontent.style.display = "block";
@@ -60,6 +61,7 @@ btnSignUp.onclick = function() {
 
 // // When the user clicks the signin, open the modal 
 btnSignIn.onclick = function() {
+    document.getElementById("siginFormId").reset();
     modal.style.display = "block";
     var signupcontent = document.getElementById("signUpContainer");
     signupcontent.style.display = "none";
@@ -84,6 +86,7 @@ signInSpan.onclick = function() {
 }
 
 signUpLink.onclick =function(){
+    document.getElementById("signupFormId").reset();
     modal.style.display = "block";
     var signupcontent = document.getElementById("signUpContainer");
     signupcontent.style.display = "block";

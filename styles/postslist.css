@@ -166,6 +166,7 @@ body, html {
   
   #ref{
     color:blue;
+    text-decoration: none;
   }
 
   .posts{
